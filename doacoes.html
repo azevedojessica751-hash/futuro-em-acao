@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doações - Futuro em Ação</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Playwrite+DE+Grund+Guides&family=Playwrite+DE+SAS:wght@100..400&display=swap" rel="stylesheet">
+    
+    <style>
+        /* ------------------------------------- */
+        /* ESTILOS GERAIS (MANTENDO A COERÊNCIA) */
+        /* ------------------------------------- */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            background-color: #FFCC99; /* Cor de fundo da página inicial */
+            color: #333;
+        }
+
+        .container {
+            max-width: 1100px; 
+            margin: 0 auto; 
+            padding: 0 20px;
+        }
+
+        header {
+            background-color: #ffffff;
+            color: #000000;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header img {
+            height: 120px;
+            width: auto;
+        }
+
+        /* 2. APLICANDO A FONTE 'Balsamiq Sans' NO TÍTULO H1 */
+        header h1 {
+            font-family: "Dancing Script", cursive;
+            color: #FF6F61;
+            margin: 0 0 10px 0; 
+            font-size: 38px; /* Tamanho maior para destaque */
+            font-weight: 700;
+        }
+        /* FIM DA CORREÇÃO H1 */
+
+
+        nav {
+            background-color: #ff7f00; /* Laranja da navegação */
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 10px 0;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #ffe0b3;
+        }
+        
+        /* Estilo para o botão de Doações na navegação (para indicar a página ativa) */
+        nav a[href="doacoes.html"] {
+            color: #ffe0b3;
+            text-decoration: underline;
+        }
+
+
+        main {
+            padding: 40px 20px;
+        }
+        
+        /* ------------------------------------- */
+        /* ESTILOS ESPECÍFICOS DA PÁGINA DE DOAÇÕES */
+        /* ------------------------------------- */
+        
+        .destaque-doacoes {
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .destaque-doacoes h1 {
+            color: #ff7f00; /* Laranja em destaque */
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        
+        .destaque-doacoes p {
+            max-width: 800px;
+            margin: 0 auto 30px;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        /* Estrutura de Cartões (Grid de 3 Colunas) */
+        .opcoes-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .card-doacao {
+            background-color: #e8f9f9; /* Cor clara, perto do verde-água */
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            width: 100%;
+            max-width: 300px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .card-doacao:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+        }
+
+        .card-doacao h3 {
+            color: #000000; /* Verde-água */
+            margin-top: 0;
+            font-size: 24px;
+        }
+        
+        .info-doacao {
+            background-color: #f8f8f8;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 15px;
+            border: 1px dashed #ccc;
+        }
+        
+        /* Estilo para Botão de Ação/PIX */
+        .btn-acao {
+            background-color: #ff7f00;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            margin-top: 15px;
+            display: inline-block;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        
+        .btn-acao:hover {
+            background-color: #ffa500;
+        }
+
+        /* Footer */
+        footer { 
+            background-color: #ff7f00; 
+            color: white; 
+            text-align: center; 
+            padding: 20px; 
+            margin-top: 40px;
+        }
+        
+        /* Responsividade básica */
+        @media (max-width: 768px) {
+            .opcoes-container {
+                gap: 20px;
+            }
+            .card-doacao {
+                max-width: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src="logo.png" alt="Logo Futuro em Ação" height="120">
+        <h1>Futuro em Ação - De Mão em Mão</h1>
+    <p>⭐ Faça a Diferença ⭐</p>
+
+    </header>
+
+    <nav>
+        <a href="index.html">Início</a>
+        <a href="index.html#sobre-nos">Sobre Nós</a>
+        <a href="projetos.html">Projetos</a>
+        <a href="voluntarios.html">Voluntários</a>
+        <a href="cadastro_voluntario.html">Cadastro</a>
+        <a href="doacoes.html">Doações</a>
+        <a href="contato.html">Contatos</a> </nav>
+ 
+
+    <main class="container">
+        <section class="destaque-doacoes">
+            <h1>Sua Contribuição Transforma!</h1>
+            <p>
+                Cada doação, seja ela material ou financeira, é um investimento direto no futuro de uma criança. Graças ao seu apoio, podemos fornecer material escolar, oferecer reforço educacional e manter nossas atividades que promovem a dignidade e o desenvolvimento.
+            </p>
+
+            <h2>Escolha como deseja contribuir:</h2>
+            
+            <div class="opcoes-container">
+                
+                <div class="card-doacao">
+                    <h3>Doação Financeira (PIX)</h3>
+                    <p>A forma mais rápida e fácil de ajudar.</p>
+                    
+                    <div class="info-doacao">
+                        <p style="font-weight: bold; color: #ff7f00;">Chave PIX (CNPJ)</p>
+                        <p style="font-size: 18px; margin: 5px 0;">00.000.000/0001-00</p>
+                    </div>
+                    
+                    <p style="font-size: 14px; margin-top: 20px;">
+                        *Verifique se o destinatário é **Futuro em Ação ONG**.
+                    </p>
+                </div>
+
+                <div class="card-doacao">
+                    <h3>Transferência Bancária</h3>
+                    <p>Para doações diretas via TED ou DOC.</p>
+                    
+                    <div class="info-doacao" style="text-align: left; font-size: 14px;">
+                        <p><strong>Banco:</strong> 001 - Banco do Brasil</p>
+                        <p><strong>Agência:</strong> 0000</p>
+                        <p><strong>Conta Corrente:</strong> 00000-0</p>
+                        <p><strong>CNPJ:</strong> 00.000.000/0001-00</p>
+                    </div>
+                    
+                    <a href="#" class="btn-acao">Ver Comprovante</a>
+                </div>
+
+                <div class="card-doacao">
+                    <h3>Doação de Material</h3>
+                    <p>Livros, mochilas, lápis, uniformes e brinquedos.</p>
+                    
+                    <div class="info-doacao">
+                        <p style="font-weight: bold; color: #000000;">Pontos de Coleta</p>
+                        <p style="font-size: 14px; margin: 5px 0;">
+                            Rua da Esperança, 145 – Boituva/SP <br>
+                            (Seg. a Sex. das 9h às 17h)
+                        </p>
+                    </div>
+                    
+                    <a href="tel:+5515997882237" class="btn-acao">Ligar para Agendar</a>
+                </div>
+            </div>
+
+        </section>
+        
+        <section style="text-align: center; padding: 30px; background-color: #f4f6f9; border-radius: 10px;">
+            <h2>Dúvidas ou Doações Maiores?</h2>
+            <p style="max-width: 600px; margin: 0 auto;">Entre em contato conosco por email para discutir outras formas de apoio ou parcerias.</p>
+            <a href="mailto:azevedojessica751@hotmail.com" class="btn-acao" style="background-color: #ff7f00;">Enviar Email</a>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Futuro em Ação | Todos os direitos reservados</p>
+    </footer>
+
+</body>
+</html>

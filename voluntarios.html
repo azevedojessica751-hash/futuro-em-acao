@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voluntários - Futuro em Ação</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Playwrite+DE+Grund+Guides&family=Playwrite+DE+SAS:wght@100..400&display=swap" rel="stylesheet">
+    
+    <style>
+        /* ESTILOS GERAIS */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            background-color: #FFCC99; 
+            color: #333;
+        }
+
+        header {
+            background-color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        
+        /* CORREÇÃO DO ESTILO DO TÍTULO (H1) - IGUALANDO À PÁGINA INICIAL */
+        header h1 {
+            font-family: "Dancing Script", cursive; 
+            color: #FF6F61;
+            margin: 0 0 10px 0; 
+            font-size: 38px; /* Tamanho maior para destaque */
+            font-weight: 700;
+        }
+        /* FIM DA REGRA DE CSS DO H1 */
+
+
+        nav {
+            background-color: #ff7f00;
+            display: flex; /* Adicionado para melhor centralização */
+            justify-content: center;
+            flex-wrap: wrap; /* Adicionado para responsividade */
+            padding: 10px 0;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            /* AJUSTE PARA IGUALAR O TAMANHO E FONTE DAS PÁGINAS INICIAL E DOAÇÕES */
+            font-size: 16px; 
+            margin: 0 20px; 
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        /* REGRA: Sublinha APENAS o link de Voluntários (página ativa) */
+        nav a[href="voluntarios.html"] {
+            text-decoration: underline;
+        }
+        
+        /* Efeito hover */
+        nav a:hover {
+            color: #ffe0b3;
+        }
+
+
+        main {
+            padding: 40px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        footer {
+            background-color: #ff7f00;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 40px;
+        }
+
+        h1 {
+            color: #000000;
+            text-align: center;
+        }
+
+        .voluntario-destaque {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .voluntario-destaque h2 {
+            color: #000000; /* Destaque em verde */
+            font-size: 32px;
+        }
+
+        /* ESTILOS DA GALERIA DE VOLUNTÁRIOS */
+        .galeria-voluntarios {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            padding: 20px 0;
+        }
+
+        .card-voluntario {
+            background-color: #f8fbff; /* Fundo suave */
+            padding: 40px;
+            border-radius: 10px;
+            width: 250px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.0.1);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        
+        .card-voluntario:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .card-voluntario img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%; /* Imagem redonda */
+            object-fit: cover;
+            margin-bottom: 15px;
+            border: 3px solid #ff7f00; /* Borda laranja */
+        }
+
+        .card-voluntario h4 {
+            color: #ff7f00;
+            margin: 5px 0;
+        }
+
+        .card-voluntario p {
+            font-size: 14px;
+            color: #555;
+        }
+        /* ESTILO DO BOTÃO (PADRÃO) */
+        button {
+            background-color: #ff7f00;
+            color: white;
+            border: none;
+            padding: 12px 25px; 
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background-color: #ffa500;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src="logo.png" alt="Logo Futuro em Ação" height="120">
+    <h1>Futuro em Ação - De Mão em Mão</h1>
+    <p>⭐ Um por todos, todos por um ⭐</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Início</a>
+        <a href="index.html#sobre-nos">Sobre Nós</a>
+        <a href="projetos.html">Projetos</a>
+        <a href="voluntarios.html">Voluntários</a> <a href="cadastro_voluntario.html">Cadastro</a>
+        <a href="doacoes.html">Doações</a>
+        <a href="contato.html">Contatos</a> 
+    </nav>
+
+    <main>
+        <section class="voluntario-destaque">
+            <h2>Queremos Você no Nosso Time!</h2>
+            <p style="max-width: 800px; margin: 15px auto 30px; line-height: 1.7; font-size: 18px;">
+                No Futuro em Ação, os voluntários são o **coração** e a **energia** que movem a nossa missão. É o seu tempo, sua paixão e sua entrega que transformam materiais em oportunidades reais. Ser voluntário é uma jornada de aprendizado, amor e generosidade, e a maior recompensa é o sorriso de quem recebe a ajuda. Se você tem vontade de **doar seu tempo, seu sorriso ou seu talento** (em reforço escolar, dança ou organização), este é o seu lugar.
+            </p>
+            <button onclick="window.location.href='cadastro_voluntario.html'">Inscreva-se Agora!</button>
+        </section>
+
+        <section class="voluntario-destaque">
+            <h2>⭐ Nossas Estrelas do Mês ⭐</h2>
+            <p style="max-width: 700px; margin: 15px auto 30px; line-height: 1.6;">
+                Agradecemos imensamente aos nossos voluntários que dedicam o mês inteiro, com compromisso e amor inabaláveis, aos Projetos **Reforço Nota 10** e **Corpo e Movimento**. Sem o seu esforço contínuo, nossa missão não seria possível.
+            </p>
+
+            <div class="galeria-voluntarios">
+                <div class="card-voluntario">
+                    <img src="voluntario_a.jpg" alt="Foto de Maria Eduarda">
+                    <h4>Maria Eduarda S.</h4>
+                    <p>Professora Voluntária de Matemática</p>
+                    <p>Dedicada às aulas do Projeto Reforço Nota 10, sua paciência e carinho mudam o futuro de nossos jovens. Obrigado, Duda!</p>
+                </div>
+
+                <div class="card-voluntario">
+                    <img src="voluntario_b.jpg" alt="Foto de João Vitor">
+                    <h4>João Vitor F.</h4>
+                    <p>Instrutor Voluntário de Dança Urbana</p>
+                    <p>Com sua energia, ele traz ritmo e autoestima para o Projeto Corpo e Movimento. Essencial para a alegria das nossas turmas!</p>
+                </div>
+
+                <div class="card-voluntario">
+                    <img src="voluntario_c.jpg" alt="Foto de Ana Cristina">
+                    <h4>Ana Cristina R.</h4>
+                    <p>Apoio à Logística e Arrecadação</p>
+                    <p>O braço direito na organização das doações e na separação de materiais. O compromisso dela garante a transparência da ONG.</p>
+                </div>
+                
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Futuro em Ação | Todos os direitos reservados</p>
+    </footer>
+</body>
+</html>

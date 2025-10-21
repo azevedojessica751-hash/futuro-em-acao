@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nossos Projetos - Futuro em Ação</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Playwrite+DE+Grund+Guides&family=Playwrite+DE+SAS:wght@100..400&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css"> 
+    <style>
+        
+        /* ESTILOS GERAIS */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            background-color: #FFCC99; 
+            color: #333;
+        }
+
+        header {
+            background-color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* AJUSTE DO H1 (IGUALANDO À PÁGINA INICIAL) */
+        header h1 {
+            font-family: "Dancing Script", cursive;
+            color: #FF6F61;
+            margin: 0 0 10px 0; 
+            font-size: 38px; /* Tamanho maior para destaque */
+            font-weight: 700;
+
+        }
+        /* FIM DA REGRA DE CSS DO H1 */
+
+
+        nav {
+            background-color: #ff7f00;
+            display: flex; /* Adicionado para melhor centralização */
+            justify-content: center;
+            flex-wrap: wrap; /* Adicionado para responsividade */
+            padding: 10px 0;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            /* AJUSTE PARA IGUALAR O TAMANHO E FONTE DAS PÁGINAS INICIAL E DOAÇÕES */
+            font-size: 16px; 
+            margin: 0 20px; 
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        /* REGRA: Sublinha APENAS o link de Projetos (página ativa) */
+        nav a[href="projetos.html"] {
+            text-decoration: underline;
+        }
+
+        nav a:hover {
+            color: #ffe0b3;
+        }
+
+        main {
+            padding: 40px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        /* ESTILO DO CARD PROJETO */
+        .projeto {
+            background: white;
+            margin: 30px 0;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15); /* Sombra um pouco mais destacada */
+        }
+
+        .projeto img {
+            width: 100%;
+            max-height: 350px; /* Aumentei um pouco a altura da imagem */
+            object-fit: cover;
+            border-radius: 12px;
+            margin-bottom: 25px;
+        }
+
+        /* ESTILOS DE TEXTO E BOTÕES PERSONALIZADOS (NOVO) */
+        .projeto h2 {
+            color: #ff7f00; /* Título em laranja para destaque */
+            margin-bottom: 20px;
+            font-size: 28px;
+            text-align: center;
+        }
+        
+        .projeto-texto {
+            max-width: 90%; /* Ajuste a largura do texto dentro do card */
+            margin: 0 auto;
+            text-align: justify;
+            line-height: 1.8; /* Aumenta o espaçamento para mais conforto na leitura */
+            font-size: 17px;
+            padding: 10px 0;
+        }
+
+        .projeto-texto strong {
+            color: #2b7a78; /* Destaque em verde para palavras-chave */
+            font-weight: 700;
+        }
+
+        .chamada-final {
+            font-size: 19px;
+            font-weight: bold;
+            color: #ff7f00;
+            margin: 30px 0 20px 0;
+            padding: 15px;
+            border: 2px dashed #ff7f0050; 
+            border-radius: 8px;
+            text-align: center;
+        }
+        
+        .projeto-acoes {
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            gap: 20px; 
+            flex-wrap: wrap; /* Garante que os botões se ajustem em telas menores */
+        }
+
+        /* ESTILO DO FOOTER E BOTÕES PADRÃO */
+        footer {
+            background-color: #ff7f00;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 40px;
+        }
+
+        button {
+            background-color: #ff7f00;
+            color: white;
+            border: none;
+            padding: 12px 25px; /* Aumentei o padding do botão */
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background-color: #ffa500;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+    <img src="logo.png" alt="Logo Futuro em Ação" height="120">
+    <h1>Futuro em Ação - De Mão em Mão</h1>
+    <p>⭐ A união faz a força ⭐</p>
+</header>
+
+    <nav>
+        <a href="index.html">Início</a>
+        <a href="index.html#sobre-nos">Sobre Nós</a>
+        <a href="projetos.html">Projetos</a>
+        <a href="voluntarios.html">Voluntários</a>
+        <a href="cadastro_voluntario.html">Cadastro</a>
+        <a href="doacoes.html">Doações</a>
+        <a href="contato.html">Contatos</a> 
+    </nav>
+
+    <main>
+        <section class="projeto">
+            <img src="foto1.png" alt="Pessoas dançando em grupo, cheias de energia.">
+            
+            <h2>🌟 Projeto: Corpo e Movimento – Aulas de Dança Solidárias 🌟</h2>
+            
+            <div class="projeto-texto">
+                <p>Que alegria ter você aqui! No nosso **Projeto Corpo e Movimento**, transformamos cada passo em uma oportunidade de crescimento e felicidade. Acreditamos de coração que a dança é uma magia que, além de nos colocar em sintonia com a música, é um abraço para a alma e um presente para o corpo.</p>
+                
+                <p>Mais do que aprender coreografias, criamos um espaço **seguro, alegre e cheio de energia** onde crianças, jovens e adultos podem florescer. É aqui que a **disciplina** encontra a **diversão**, a **autoestima** ganha ritmo e a **saúde** dança em perfeita harmonia. Cada aula é um reflexo do nosso carinho, baseada nos valores de **Amor, Respeito e Inclusão** que tanto prezamos.</p>
+                
+                <p>Seu apoio é a melodia que mantém nosso projeto vivo! Se você sente no coração o desejo de ser um instrutor voluntário ou quer nos ajudar com doações de materiais (como espelhos, pisos ou caixas de som), **junte-se a nós nesta ciranda de esperança**.</p>
+                
+                <p class="chamada-final">Juntos, de passo em passo, vamos transformar vidas, semear sorrisos e construir um futuro muito mais brilhante. ✨ **Venha fazer parte deste movimento que encanta!** ✨</p>
+            </div>
+            
+            <div class="projeto-acoes">
+                <button onclick="window.location.href='cadastro_voluntario.html'">Quero ser Voluntário!</button>
+                <button onclick="window.location.href='doacoes.html'">Quero Doar!</button>
+            </div>
+        </section>
+
+        <section class="projeto">
+            <img src="foto2.png" alt="Crianças estudando em uma sala de aula com voluntários.">
+            
+            <h2>📚 Projeto Reforço Nota 10: Transformando Dificuldade em Oportunidade!</h2>
+            
+            <div class="projeto-texto">
+                <p>Acreditamos que a educação é a maior ferramenta de transformação. É por isso que lançamos o **Reforço Nota 10 – Aulas de Reforço Escolar Solidário**.</p>
+                
+                <p>Nosso projeto vai além da doação de materiais; ele oferece o suporte pedagógico crucial para que crianças e adolescentes superem as dificuldades e **brilhem na escola**.</p>
+                
+                <p>O que oferecemos? Aulas focadas nas necessidades individuais em **Matemática e Português**, em um ambiente de aprendizado **seguro e acolhedor**, seguindo nossos valores de **Respeito e Empatia**. Nosso foco é o desenvolvimento da **autonomia** e da **autoconfiança** no estudo.</p>
+                
+                <p>Para manter o Reforço Nota 10 em pleno funcionamento, contamos com a sua solidariedade:</p>
+                
+                <p class="chamada-final">Seja um **Voluntário Professor** e compartilhe seu conhecimento, ou **Doe Materiais** como cadernos e jogos educativos! **Junte-se a nós e invista diretamente no futuro da nossa comunidade!**</p>
+            </div>
+            
+            <div class="projeto-acoes">
+                <button onclick="window.location.href='cadastro_voluntario.html'">Quero ser Voluntário Professor!</button>
+                <button onclick="window.location.href='doacoes.html'">Quero Doar Materiais!</button>
+            </div>
+        </section>
+
+        <section class="projeto">
+            <img src="foto3.png" alt="Mãos unidas simbolizando ajuda e solidariedade.">
+            
+            <h2>🧡 Seja um Doador: Seu Gesto Move o Nosso Futuro!</h2>
+            
+            <div class="projeto-texto">
+                <p>Na **Futuro em Ação**, a doação é o nosso motor. Acreditamos que o que não serve mais para um, pode ser a grande oportunidade para o outro. Quando você doa, você não está apenas entregando um item ou um valor; você está investindo diretamente no **potencial e na dignidade humana**.</p>
+                
+                <p>Seu gesto de solidariedade tem um impacto direto em nossos pilares, como a **Educação** (Projeto Reforço Nota 10), a **Arte** (Projeto Corpo e Movimento) e a **Sustentabilidade** da nossa ONG.</p>
+                
+                <p class="chamada-final">Seja um agente de mudança! Seu **Amor ao Próximo** é o que nos move. **Transforme o que não usa mais em um novo começo para quem precisa. Doe agora!**</p>
+            </div>
+            
+            <div class="projeto-acoes">
+                <button onclick="window.location.href='doacoes.html'">Quero Doar Agora!</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Futuro em Ação | Todos os direitos reservados</p>
+    </footer>
+</body>
+</html>
