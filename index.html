@@ -148,7 +148,21 @@
         #projetos-section { background-color: #f8fbff; }
         #contatos { background-color: #f4f6f9; }
 
-        .slideshow {
+        /* CSS Original:
+.slideshow {
+    position: relative;
+    width: 800px;  <- REMOVER/MUDAR
+    height: 600px; <- REMOVER/MUDAR (Vamos usar padding-top para a proporção)
+    margin: 40px auto;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    background-color: transparent;
+}
+*/
+
+/* NOVO CSS: Usando a técnica de "Aspect Ratio Box" */
+.slideshow {
     position: relative;
     max-width: 800px; /* Largura máxima, mas se ajusta se a tela for menor */
     width: 100%;     /* Ocupa a largura total do contêiner */
@@ -159,6 +173,13 @@
     border-radius: 15px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
     background-color: transparent;
+}
+
+/* Opcional: Adicionar uma Media Query para telas menores que 800px */
+@media (max-width: 850px) {
+    .slideshow {
+        max-width: 95%; /* Ajusta para 95% da tela em dispositivos menores */
+    }
 }
 
         .slideshow img {
@@ -340,3 +361,4 @@ Compromisso social: promover mudanças reais por meio de iniciativas solidárias
     </script>
 </body>
 </html>
+
