@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -146,17 +148,18 @@
         #projetos-section { background-color: #f8fbff; }
         #contatos { background-color: #f4f6f9; }
 
-        /* Slideshow */
         .slideshow {
-            position: relative;
-            width: 800px;
-            height: 600px;
-            margin: 40px auto;
-            overflow: hidden;
-            border-radius: 15px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
-            background-color: transparent;
-        }
+    position: relative;
+    max-width: 800px; /* Largura máxima, mas se ajusta se a tela for menor */
+    width: 100%;     /* Ocupa a largura total do contêiner */
+    height: 0;       /* Altura 0 para usar padding */
+    padding-top: 75%; /* 3:4 Proporção (600px / 800px = 0.75). Se suas imagens forem 16:9, use 56.25% */
+    margin: 40px auto;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    background-color: transparent;
+}
 
         .slideshow img {
             position: absolute;
