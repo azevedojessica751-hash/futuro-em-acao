@@ -8,9 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Playwrite+DE+Grund+Guides&family=Playwrite+DE+SAS:wght@100..400&display=swap" rel="stylesheet">
     
     <style>
-        /* ------------------------------------- */
-        /* ESTILOS GERAIS */
-        /* ------------------------------------- */
+        /* [ ... ESTILOS GERAIS ... ] */
         body {
             font-family: 'Poppins', sans-serif;
             margin: 0;
@@ -129,17 +127,21 @@
             color: #ff7f00; 
         }
         
-        
+        /* CORRIGIDO: Estilos para o banner principal com a imagem */
         #inicio {
             background: url('fundo.png') no-repeat center/cover;
-            color: #3aafa9;
+            color: white; /* Cor da fonte alterada para branco para melhor contraste */
             text-shadow: 1px 1px 3px #000;
             padding: 120px 20px;
+            border-radius: 10px; /* Adicionado um arredondamento para melhor visual */
+            margin-bottom: 40px; /* Espaçamento após o banner */
         }
 
         #inicio h2 {
             font-size: 42px;
             margin-bottom: 15px;
+            color: white; /* Garantindo que o H2 também seja branco */
+            text-shadow: 1px 1px 3px #000;
         }
 
     
@@ -240,12 +242,12 @@
     </nav>
 
     <main class="container">
-
-        <div style="text-align: center; padding: 30px; background-color: #fff; border-radius: 10px; margin-top: 40px;">
+        
+        <section id="inicio" class="fade-in">
              <h2>Junte-se a Nós!</h2>
              <p style="margin-top: 10px;">Seu talento pode fazer a diferença! Conheça nossas oportunidades.</p>
              <a href="voluntarios.html" class="button-link" style="margin-top: 20px;">Quero ser Voluntário</a>
-        </div>
+        </section>
         <section id="sobre-nos" class="fade-in">
             <h2>⭐Sobre Nós⭐</h2>
             <div class="texto-leitura">
@@ -310,7 +312,8 @@ Compromisso social: promover mudanças reais por meio de iniciativas solidárias
                 <p>📲 WhatsApp:(15) 99788-2237</p>
             </div> 
         </section>
-        </main> 
+
+    </main> 
     
     <footer>
         <p>© 2025 Futuro em Ação | Todos os direitos reservados</p>
