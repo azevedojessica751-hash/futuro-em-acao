@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Voluntários - Futuro em Ação</title>
+    <title>Contatos - Futuro em Ação</title>
     
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Playwrite+DE+Grund+Guides&family=Playwrite+DE+SAS:wght@100..400&display=swap" rel="stylesheet">
     
@@ -12,7 +12,7 @@
         body {
             font-family: 'Poppins', sans-serif;
             margin: 0;
-            background-color: #FFCC99; 
+            background-color: #FFCC99; /* Laranja Salmão Claro */
             color: #333;
         }
 
@@ -22,41 +22,35 @@
             padding: 20px;
         }
         
-        /* CORREÇÃO DO ESTILO DO TÍTULO (H1) - IGUALANDO À PÁGINA INICIAL */
         header h1 {
-            font-family: "Dancing Script", cursive; 
+            font-family: "Dancing Script", cursive;
             color: #FF6F61;
             margin: 0 0 10px 0; 
-            font-size: 38px; /* Tamanho maior para destaque */
+            font-size: 38px;
             font-weight: 700;
         }
-        /* FIM DA REGRA DE CSS DO H1 */
-
 
         nav {
             background-color: #ff7f00;
-            display: flex; /* Adicionado para melhor centralização */
+            display: flex;
             justify-content: center;
-            flex-wrap: wrap; /* Adicionado para responsividade */
+            flex-wrap: wrap;
             padding: 10px 0;
         }
 
         nav a {
             color: white;
             text-decoration: none;
-            /* AJUSTE PARA IGUALAR O TAMANHO E FONTE DAS PÁGINAS INICIAL E DOAÇÕES */
-            font-size: 16px; 
-            margin: 0 20px; 
+            margin: 0 20px;
             font-weight: bold;
             transition: color 0.3s;
         }
 
-        /* REGRA: Sublinha APENAS o link de Voluntários (página ativa) */
-        nav a[href="voluntarios.html"] {
+        /* REGRA: Sublinha APENAS o link de Contatos (página ativa) */
+        nav a[href="contato.html"] {
             text-decoration: underline;
         }
         
-        /* Efeito hover */
         nav a:hover {
             color: #ffe0b3;
         }
@@ -75,82 +69,93 @@
             padding: 15px;
             margin-top: 40px;
         }
-
-        h1 {
-            color: #000000;
-            text-align: center;
-        }
-
-        .voluntario-destaque {
-            background: white;
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-            text-align: center;
-            margin-bottom: 40px;
-        }
-
-        .voluntario-destaque h2 {
-            color: #000000; /* Destaque em verde */
-            font-size: 32px;
-        }
-
-        /* ESTILOS DA GALERIA DE VOLUNTÁRIOS */
-        .galeria-voluntarios {
+        
+        /* --- ESTILOS ESPECÍFICOS DE CONTATO --- */
+        .contato-container {
             display: flex;
             flex-wrap: wrap;
-            justify-content: center;
-            gap: 30px;
-            padding: 20px 0;
-        }
-
-        .card-voluntario {
-            background-color: #f8fbff; /* Fundo suave */
-            padding: 40px;
-            border-radius: 10px;
-            width: 250px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.0.1);
-            text-align: center;
-            transition: transform 0.3s;
+            gap: 40px;
+            justify-content: space-between;
         }
         
-        .card-voluntario:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        .info-contato, .formulario-contato {
+            flex: 1;
+            min-width: 300px; /* Garante que não fique muito estreito */
+            background-color: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
         }
 
-        .card-voluntario img {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%; /* Imagem redonda */
-            object-fit: cover;
-            margin-bottom: 15px;
-            border: 3px solid #ff7f00; /* Borda laranja */
+        .formulario-contato {
+            background-color: #e8f9f9; /* Fundo do formulário */
         }
-
-        .card-voluntario h4 {
+        
+        .formulario-contato h2, .info-contato h2 {
             color: #ff7f00;
-            margin: 5px 0;
+            text-align: center;
+            margin-bottom: 20px;
         }
 
-        .card-voluntario p {
-            font-size: 14px;
+        /* Estilos do Formulário (Reutilizado do cadastro_voluntario.html) */
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
             color: #555;
+            font-size: 14px;
         }
-        /* ESTILO DO BOTÃO (PADRÃO) */
-        button {
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        textarea {
+            width: 100%;
+            padding: 12px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+        
+        textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+        
+        .btn-enviar {
             background-color: #ff7f00;
             color: white;
+            padding: 12px 25px;
+            font-weight: bold;
             border: none;
-            padding: 12px 25px; 
             border-radius: 8px;
             cursor: pointer;
-            font-size: 16px;
+            width: 100%;
+            margin-top: 20px;
             transition: 0.3s;
         }
 
-        button:hover {
-            background-color: #ffa500;
+        .btn-enviar:hover {
+            background-color: #ffb650;
+        }
+        
+        .detalhe-info p {
+            font-size: 16px;
+            line-height: 1.6;
+            margin: 10px 0;
+        }
+        
+        .detalhe-info strong {
+            color: #ff7f00;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .contato-container {
+                flex-direction: column;
+            }
         }
     </style>
 </head>
@@ -159,58 +164,77 @@
     <header>
         <img src="logo.png" alt="Logo Futuro em Ação" height="120">
     <h1>Futuro em Ação - De Mão em Mão</h1>
-    <p>⭐ Um por todos, todos por um ⭐</p>
+    <p>⭐ Fale Conosco ⭐</p>
     </header>
 
     <nav>
         <a href="index.html">Início</a>
         <a href="index.html#sobre-nos">Sobre Nós</a>
         <a href="projetos.html">Projetos</a>
-        <a href="voluntarios.html">Voluntários</a> <a href="cadastro_voluntario.html">Cadastro</a>
+        <a href="voluntarios.html">Voluntários</a>
+        <a href="cadastro_voluntario.html">Cadastro</a>
         <a href="doacoes.html">Doações</a>
         <a href="contato.html">Contatos</a> 
     </nav>
 
     <main>
-        <section class="voluntario-destaque">
-            <h2>Queremos Você no Nosso Time!</h2>
-            <p style="max-width: 800px; margin: 15px auto 30px; line-height: 1.7; font-size: 18px;">
-                No Futuro em Ação, os voluntários são o **coração** e a **energia** que movem a nossa missão. É o seu tempo, sua paixão e sua entrega que transformam materiais em oportunidades reais. Ser voluntário é uma jornada de aprendizado, amor e generosidade, e a maior recompensa é o sorriso de quem recebe a ajuda. Se você tem vontade de **doar seu tempo, seu sorriso ou seu talento** (em reforço escolar, dança ou organização), este é o seu lugar.
-            </p>
-            <button onclick="window.location.href='cadastro_voluntario.html'">Inscreva-se Agora!</button>
-        </section>
+        <div class="contato-container">
+            
+            <section class="formulario-contato">
+                <h2>Envie sua Mensagem</h2>
+                <p style="text-align: center;">Preencha o formulário e responderemos em até 48 horas úteis.</p>
 
-        <section class="voluntario-destaque">
-            <h2>⭐ Nossas Estrelas do Mês ⭐</h2>
-            <p style="max-width: 700px; margin: 15px auto 30px; line-height: 1.6;">
-                Agradecemos imensamente aos nossos voluntários que dedicam o mês inteiro, com compromisso e amor inabaláveis, aos Projetos **Reforço Nota 10** e **Corpo e Movimento**. Sem o seu esforço contínuo, nossa missão não seria possível.
-            </p>
+                <form action="processa_contato.php" method="POST">
+                    
+                    <label for="nome">Nome Completo <span style="color: red;">*</span></label>
+                    <input type="text" id="nome" name="nome" placeholder="Seu Nome" required>
 
-            <div class="galeria-voluntarios">
-                <div class="card-voluntario">
-                    <img src="voluntario_a.jpg" alt="Foto de Maria Eduarda">
-                    <h4>Maria Eduarda S.</h4>
-                    <p>Professora Voluntária de Matemática</p>
-                    <p>Dedicada às aulas do Projeto Reforço Nota 10, sua paciência e carinho mudam o futuro de nossos jovens. Obrigado, Duda!</p>
-                </div>
+                    <label for="email">E-mail <span style="color: red;">*</span></label>
+                    <input type="email" id="email" name="email" placeholder="seu.email@provedor.com" required>
+                    
+                    <label for="assunto">Assunto</label>
+                    <input type="text" id="assunto" name="assunto" placeholder="Dúvida, sugestão, parceria, etc.">
 
-                <div class="card-voluntario">
-                    <img src="voluntario_b.jpg" alt="Foto de João Vitor">
-                    <h4>João Vitor F.</h4>
-                    <p>Instrutor Voluntário de Dança Urbana</p>
-                    <p>Com sua energia, ele traz ritmo e autoestima para o Projeto Corpo e Movimento. Essencial para a alegria das nossas turmas!</p>
-                </div>
+                    <label for="mensagem">Mensagem <span style="color: red;">*</span></label>
+                    <textarea id="mensagem" name="mensagem" placeholder="Descreva sua mensagem..." required></textarea>
+                    
+                    <button type="submit" class="btn-enviar">Enviar Mensagem</button>
+                </form>
+            </section>
 
-                <div class="card-voluntario">
-                    <img src="voluntario_c.jpg" alt="Foto de Ana Cristina">
-                    <h4>Ana Cristina R.</h4>
-                    <p>Apoio à Logística e Arrecadação</p>
-                    <p>O braço direito na organização das doações e na separação de materiais. O compromisso dela garante a transparência da ONG.</p>
+            <section class="info-contato">
+                <h2>Nossos Contatos e Localização</h2>
+                
+                <div class="detalhe-info">
+                    <h3>Atendimento e Telefones</h3>
+                    <p><strong>Telefone Principal:</strong> <a href="tel:+5515997882237">(15) 99788-2237</a> (WhatsApp e Ligações)</p>
+                    <p><strong>E-mail Geral:</strong> <a href="mailto:contato@futuroemacao.org">contato@futuroemacao.org</a></p>
+                    <p><strong>Atendimento:</strong> Segunda a Sexta, das 9h às 17h</p>
                 </div>
                 
-            </div>
-        </section>
+                <hr style="border-top: 1px dashed #ccc; margin: 30px 0;">
 
+                <div class="detalhe-info">
+                    <h3>Endereço da Sede</h3>
+                    <p><strong>Futuro em Ação ONG</strong></p>
+                    <p>Rua da Esperança, 145</p>
+                    <p>Jardim Progresso, Boituva - SP, 18550-000</p>
+                </div>
+                
+                <div style="margin-top: 20px;">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1163.5878401340578!2d-47.67499118991444!3d-23.3283944677949!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c59cc86018c187%3A0xf6353d45e54d5885!2sPra%C3%A7a%20Matriz%2C%20Boituva%20-%20SP%2C%2018550-000!5e0!3m2!1spt-BR!2sbr!4v1700000000000!5m2!1spt-BR!2sbr" 
+                        width="100%" 
+                        height="250" 
+                        style="border:0; border-radius: 8px;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="Localização da ONG Futuro em Ação no Mapa"
+                    ></iframe>
+                </div>
+            </section>
+        </div>
     </main>
 
     <footer>
