@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <title>Contato e Localização - Futuro em Ação</title>
     
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Playwrite+DE+Grund+Guides&family=Playwrite+DE+SAS:wght@100..400&display=swap" rel="stylesheet">
@@ -14,14 +14,15 @@
         body {
             font-family: 'Poppins', sans-serif;
             margin: 0;
-            background-color: #FFCC99; 
+            background-color: #FFCC99; /* Cor de fundo Laranja Salmão Claro */
             color: #333;
         }
 
         .container {
             max-width: 1100px; 
             margin: 0 auto; 
-            padding: 0 20px;
+            /* CORREÇÃO DE RESPONSIVIDADE: Garante padding lateral para telas menores */
+            padding: 0 20px; 
         }
 
         header {
@@ -36,19 +37,17 @@
             width: auto;
         }
         
-        /* CORREÇÃO 1: APLICAR A FONTE 'Balsamiq Sans' NO TÍTULO H1 */
         header h1 {
             font-family: "Dancing Script", cursive;
             color: #FF6F61;
             margin: 0 0 10px 0; 
-            font-size: 38px; /* Tamanho maior para destaque */
+            font-size: 38px;
             font-weight: 700;
 
         }
-        /* FIM DA CORREÇÃO 1 */
 
         nav {
-            background-color: #ff7f00; /* Laranja da navegação */
+            background-color: #ff7f00;
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
@@ -67,12 +66,10 @@
             color: #ffe0b3;
         }
         
-        /* CORREÇÃO 2: FORÇAR A COR BRANCA NO LINK ATUAL (Contatos) */
         nav a[href="contato.html"] {
             color: white; 
-            text-decoration: underline; /* Adicionando um sublinhado para indicar a página ativa */
+            text-decoration: underline; 
         }
-        /* FIM DA CORREÇÃO 2 */
 
         main {
             padding: 40px 20px;
@@ -145,12 +142,13 @@
 
         .form-group input[type="text"],
         .form-group input[type="email"],
+        .form-group input[type="tel"], /* Adicionado type="tel" para melhor acessibilidade */
         .form-group textarea {
             width: 100%;
             padding: 12px;
             border: 1px solid #ccc;
             border-radius: 5px;
-            box-sizing: border-box; /* Inclui padding e borda na largura total */
+            box-sizing: border-box; 
             font-size: 16px;
         }
 
@@ -160,7 +158,7 @@
         }
 
         .btn-enviar {
-            background-color: #ff7f00; /* Laranja do botão */
+            background-color: #ff7f00; 
             color: white;
             border: none;
             padding: 12px 25px;
@@ -186,6 +184,34 @@
             text-align: center; 
             padding: 20px; 
             margin-top: 40px;
+        }
+
+        /* ------------------------------------- */
+        /* AJUSTES PARA RESPONSIVIDADE (MOBILE) */
+        /* ------------------------------------- */
+        @media (max-width: 768px) {
+            
+            /* Diminui o padding em geral para usar melhor o espaço */
+            main {
+                padding: 20px 10px;
+            }
+
+            /* Reduz o tamanho do título do cabeçalho */
+            header h1 {
+                font-size: 32px;
+            }
+            
+            /* Garante que o formulário ocupe quase toda a largura sem margem lateral desnecessária */
+            .form-contato {
+                padding: 20px;
+                max-width: 100%;
+                margin: 0 auto 30px auto;
+            }
+            
+            /* Ajusta a altura do mapa para caber melhor na tela vertical */
+            .mapa-embed {
+                height: 300px;
+            }
         }
     </style>
 </head>
@@ -258,7 +284,7 @@
                     
                     <div class="form-group">
                         <label for="telefone">Telefone (Opcional)</label>
-                        <input type="text" id="telefone" name="telefone">
+                        <input type="tel" id="telefone" name="telefone"> 
                     </div>
 
                     <div class="form-group">
