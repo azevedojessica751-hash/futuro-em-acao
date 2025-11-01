@@ -1,288 +1,350 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contato e Localização - Futuro em Ação</title>
-    
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Playwrite+DE+Grund+Guides&family=Playwrite+DE+SAS:wght@100..400&display=swap" rel="stylesheet">
-    
-    <style>
-        /* ------------------------------------- */
-        /* ESTILOS GERAIS */
-        /* ------------------------------------- */
-        body {
-            font-family: 'Poppins', sans-serif;
-            margin: 0;
-            background-color: #FFCC99; 
-            color: #333;
-        }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Futuro em Ação - ONG Educacional</title>
+    
+   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Playwrite+DE+Grund+Guides&family=Playwrite+DE+SAS:wght@100..400&display=swap" rel="stylesheet">
+   
+ <style>
+/* ... (Seu CSS aqui, incluindo as correções de responsividade do slideshow) ... */
 
-        .container {
-            max-width: 1100px; 
-            margin: 0 auto; 
-            padding: 0 20px;
-        }
+/* Coloque aqui o CSS completo para fins de validação */
 
-        header {
-            background-color: #ffffff;
-            color: #000000;
-            padding: 20px 0;
-            text-align: center;
-        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            background-color:#FFCC99;
+            color: #333;
+            scroll-behavior: smooth;
+        }
+        .container {
+            max-width: 1100px; 
+            margin: 0 auto; 
+            padding: 0 20px;
+        }
 
-        header img {
-            height: 120px;
-            width: auto;
-        }
-        
-        /* CORREÇÃO 1: APLICAR A FONTE 'Balsamiq Sans' NO TÍTULO H1 */
-        header h1 {
-            font-family: "Dancing Script", cursive;
-            color: #FF6F61;
-            margin: 0 0 10px 0; 
-            font-size: 38px; /* Tamanho maior para destaque */
-            font-weight: 700;
+        header {
+            background-color: white;
+            color: #FF6F61;
+            padding: 20px 0;
+            text-align: center;
+        }
 
-        }
-        /* FIM DA CORREÇÃO 1 */
+        header img {
+            height: 120px; 
+            width: auto;
+        }
 
-        nav {
-            background-color: #ff7f00; /* Laranja da navegação */
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            padding: 10px 0;
-        }
+     
+        header h1 {
+            font-family: "Dancing Script", cursive;
+            color: #FF6F61;
+            margin: 0 0 10px 0; 
+            font-size: 38px; 
+            font-weight: 700;
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 20px;
-            font-weight: bold;
-            transition: 0.3s;
-        }
 
-        nav a:hover {
-            color: #ffe0b3;
-        }
-        
-        /* CORREÇÃO 2: FORÇAR A COR BRANCA NO LINK ATUAL (Contatos) */
-        nav a[href="contato.html"] {
-            color: white; 
-            text-decoration: underline; /* Adicionando um sublinhado para indicar a página ativa */
-        }
-        /* FIM DA CORREÇÃO 2 */
+        }
+        header p {
+            font-size: 18px;
+            color: #555;
+        }
 
-        main {
-            padding: 40px 20px;
-        }
+        nav {
+            background-color: #ff7f00;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 10px 0;
+        }
 
-        h2 {
-            color: #000000;
-            text-align: center;
-            margin-bottom: 30px;
-            font-size: 32px;
-        }
-        
-        /* ------------------------------------- */
-        /* SEÇÃO DE LOCALIZAÇÃO (MAPA) */
-        /* ------------------------------------- */
-        .localizacao-mapa {
-            background-color: #ffffff;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            margin-bottom: 40px;
-        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px; 
+            margin: 0 20px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        nav a[href="index.html"] {
+            text-decoration: underline;
+        }
 
-        .mapa-embed {
-            width: 100%;
-            height: 450px;
-            border: 1px solid #ccc;
-            border-radius: 8px;
-            overflow: hidden;
-            margin-top: 20px;
-        }
-        
-        .endereco-info {
-            text-align: center;
-            padding: 20px;
-            background-color: #f8f8f8;
-            border-radius: 8px;
-            margin-top: 20px;
-        }
-        
-        .endereco-info p {
-            margin: 5px 0;
-            font-size: 18px;
-            font-weight: 500;
-        }
 
-        /* ------------------------------------- */
-        /* SEÇÃO DE CONTATO (FORMULÁRIO) */
-        /* ------------------------------------- */
-        .form-contato {
-            background-color: #f8fbff;
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            max-width: 600px;
-            margin: 0 auto 40px auto;
-        }
+        nav a:hover {
+            color: #ffe0b3;
+        }
 
-        .form-group {
-            margin-bottom: 20px;
-            text-align: left;
-        }
+        section, article {
+            padding: 60px 20px;
+            text-align: center;
+        }
+        .texto-leitura {
+            max-width: 750px; 
+            margin: 20px auto 40px auto; 
+            text-align: justify; 
+            line-height: 1.7; 
+            padding: 0 15px; 
+            font-size: 17px;
+        }
+        
+        #sobre-nos {
+            background-color: #ffffff; 
+        }
 
-        .form-group label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: bold;
-            color: #333;
-        }
+        #sobre-nos figure img {
+            max-width: 90%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .mvv-container {
+            display: flex; 
+            gap: 30px; 
+            justify-content: center; 
+            margin: 40px auto;
+            flex-wrap: wrap; 
+            padding: 0 20px; 
+        }
 
-        .form-group input[type="text"],
-        .form-group input[type="email"],
-        .form-group textarea {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            box-sizing: border-box; /* Inclui padding e borda na largura total */
-            font-size: 16px;
-        }
+        .mvv-card {
+            background-color: #e8f9f9; 
+            color: black;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            flex: 1; 
+            min-width: 250px; 
+            max-width: 300px; 
+            text-align: center;
+            transition: transform 0.3s;
+            line-height: 1.6;
+        }
 
-        .form-group textarea {
-            resize: vertical;
-            min-height: 150px;
-        }
+        .mvv-card:hover {
+            transform: translateY(-5px); 
+        }
 
-        .btn-enviar {
-            background-color: #ff7f00; /* Laranja do botão */
-            color: white;
-            border: none;
-            padding: 12px 25px;
-            border-radius: 8px;
-            cursor: pointer;
-            font-size: 18px;
-            font-weight: bold;
-            transition: background 0.3s;
-            width: 100%;
-            margin-top: 10px;
-        }
-        
-        .btn-enviar:hover { 
-            background-color: #ffa500; 
-        }
+        .mvv-card h3 {
+            font-size: 24px;
+            margin-top: 0;
+            margin-bottom: 20px;
+            color: #ff7f00; 
+        }
+        
+        
+        #inicio {
+            background: url('fundo.png') no-repeat center/cover;
+            color: #3aafa9;
+            text-shadow: 1px 1px 3px #000;
+            padding: 120px 20px;
+        }
 
-        /* ------------------------------------- */
-        /* FOOTER */
-        /* ------------------------------------- */
-        footer { 
-            background-color: #ff7f00; 
-            color: white; 
-            text-align: center; 
-            padding: 20px; 
-            margin-top: 40px;
-        }
-    </style>
+        #inicio h2 {
+            font-size: 42px;
+            margin-bottom: 15px;
+        }
+
+   
+        #projetos-section { background-color: #f8fbff; }
+        #contatos { background-color: #f4f6f9; }
+
+/* NOVO CSS: Usando a técnica de "Aspect Ratio Box" para responsividade */
+.slideshow {
+    position: relative;
+    max-width: 800px; /* Largura máxima, mas se ajusta se a tela for menor */
+    width: 100%;     /* Ocupa a largura total do contêiner */
+    height: 0;       /* Altura 0 para usar padding */
+    padding-top: 75%; /* 3:4 Proporção */
+    margin: 40px auto;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    background-color: transparent;
+}
+
+/* Media Query para responsividade do slideshow */
+@media (max-width: 850px) {
+    .slideshow {
+        max-width: 95%; /* Ajusta para 95% da tela em dispositivos menores */
+    }
+}
+
+        .slideshow img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%; /* CRUCIAL para preencher a nova altura */
+            object-fit: cover;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+            border-radius: 15px;
+        }
+
+        .slideshow img.active {
+            opacity: 1;
+        }
+
+        
+        .button-link, button {
+            background-color: #ff7f00;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background 0.3s;
+            text-decoration: none; 
+            display: inline-block;
+            font-weight: bold;
+        }
+        
+        .button-link:hover, button:hover { 
+            background-color: #ffa500 
+        }
+
+        footer { background-color: #ff7f00; color: white; text-align: center; padding: 20px; }
+
+        /* Animação */
+        .fade-in { opacity: 0; transform: translateY(40px); transition: opacity 0.8s ease-out, transform 0.8s ease-out; }
+        .fade-in.visible { opacity: 1; transform: translateY(0); }
+    </style>
+
 </head>
 
 <body>
-    <header>
-        <img src="logo.png" alt="Logo Futuro em Ação" height="120"> 
-        <h1>Futuro em Ação - De Mão em Mão</h1>
-        <p>⭐ Fale Conosco ⭐</p>
+    <header>
+        <img src="logo.png" alt="Logo Futuro em Ação" height="120"> 
+        <h1>Futuro em Ação - De Mão em Mão</h1>
+        <p>⭐ Bem-vindo ⭐</p>
+    </header>
 
-    </header>
+    <nav>
+        <a href="index.html">Início</a>
+        <a href="#sobre-nos">Sobre Nós</a>
+        <a href="projetos.html">Projetos</a>
+        <a href="voluntarios.html">Voluntários</a>
+        <a href="cadastro_voluntario.html">Cadastro</a>
+        <a href="doacoes.html">Doações</a>
+        <a href="contato.html">Contatos</a>
+    </nav>
 
-    <nav>
-        <a href="index.html">Início</a>
-        <a href="index.html#sobre-nos">Sobre Nós</a>
-        <a href="projetos.html">Projetos</a>
-        <a href="voluntarios.html">Voluntários</a>
-        <a href="cadastro_voluntario.html">Cadastro</a>
-        <a href="doacoes.html">Doações</a>
-        <a href="contato.html">Contatos</a> 
-    </nav>
+    <main class="container">
 
-    <main class="container">
-        
-        <section class="localizacao-mapa">
-            <h2>Nossa Localização</h2>
-            <p style="text-align: center; font-size: 18px; max-width: 800px; margin: 0 auto 20px;">
-                Visite-nos em nosso ponto de encontro!
-            </p>
+        <section id="inicio" class="fade-in">
+            <h2>Conectando Corações e Oportunidades</h2>
+        </section>
+        
+        <section id="sobre-nos" class="fade-in">
+            <h2>⭐Sobre Nós⭐</h2>
+            
+            <div class="texto-leitura">
+                <p>
+                    Nascemos da simples e profunda ideia de que o que não serve mais para um, pode ser a grande oportunidade para outro. Nossa ONG atua como uma ponte, conectando a generosidade de doadores e voluntários àqueles que mais precisam de um reforço educacional e material. Trabalhamos incansavelmente na coleta e distribuição de livros, mochilas e materiais escolares, e na organização de projetos de reforço escolar e capacitação. Nosso objetivo vai além da doação material; buscamos inspirar, transformar e garantir que a falta de recursos nunca seja um impedimento para o desenvolvimento de uma criança.
+                </p>
+            </div>
 
-            <div class="endereco-info">
-                <p><strong>Endereço Completo:</strong> Rua da Esperança, 145 – Boituva/SP</p>
-                <p><strong>Horário de Atendimento:</strong> Segunda a Sexta, das 9h às 17h</p>
-                <p><strong>Ponto de Referência:</strong> Ao lado da praça central</p>
+            <figure>
+                <img src="imagem_2f98a0.jpg" alt="Professora lendo para um grupo de crianças sorrindo.">
+            </figure>
+        </section>
+        
+        <section id="mvv" class="fade-in">
+            <h2 style="margin-bottom: 50px;">Nossa Essência</h2> 
 
-            </div>
+            <div class="mvv-container">
+                
+                <div class="mvv-card">
+                    <h3>Missão</h3>
+                    <p>"Promover a dignidade e o desenvolvimento humano por meio do acolhimento, da educação e da inclusão social, criando oportunidades para que cada pessoa possa reconstruir sua trajetória com fé, amor e autonomia."</p>
+                </div>
 
-            <div class="mapa-embed">
-                <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3663.702813585141!2d-47.67104888497883!3d-23.32833078486047!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cf5e2b9c3f3a1f%3A0x2f98a0b0b8c6e2a!2sRua%20da%20Esperan%C3%A7a%2C%20145%20-%20Boituva%2C%20SP!5e0!3m2!1spt-BR!2sbr!4v1634842240905!5m2!1spt-BR!2sbr" 
-                    width="100%" 
-                    height="100%" 
-                    style="border:0;" 
-                    allowfullscreen="" 
-                    loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
-            </div>
-            </section>
+                <div class="mvv-card">
+                    <h3>Visão</h3>
+                    <p>"Tornar-se um símbolo de amor e solidariedade na Região dos Lagos, unindo a comunidade em ações que transformam realidades e semeiam novos começos."</p>
+                </div>
 
-        <section>
-            <h2>Mande uma Mensagem</h2>
-            
-            <div class="form-contato">
-                <p style="text-align: center; margin-bottom: 25px;">
-                    Preencha o formulário abaixo e responderemos o mais breve possível.
-                </p>
+                <div class="mvv-card">
+                    <h3>Valores</h3>
+                    <p>Amor ao próximo: essência que orienta cada uma de nossas ações.
+Respeito e empatia: acolher a todos com escuta sensível, cuidado e sem julgamentos.
+Fé e esperança: acreditar na força interior e no potencial de transformação de cada pessoa.
+Transparência: atuar com ética, clareza e responsabilidade em cada passo dado.
+Compromisso social: promover mudanças reais por meio de iniciativas solidárias e sustentáveis que gerem impacto positivo na comunidade.</p>
+                </div>
+                
+            </div>
+        </section>
 
-                <form action="SEU_ENDPOINT_DE_FORMULARIO" method="POST">
-                    
-                    <div class="form-group">
-                        <label for="nome">Nome Completo</label>
-                        <input type="text" id="nome" name="nome" required>
-                    </div>
+        <article id="projetos-section" class="fade-in">
+            <h2>Nossos Projetos</h2>
+            <p>Doações que inspiram, reforço que transforma: Equipamos o presente e construímos o futuro.</p>
+            
+            <figure class="slideshow">
+                <img src="foto1.png" alt="Crianças utilizando computadores do projeto." class="active">
+                <img src="foto2.png" alt="Voluntários ensinando em sala de aula.">
+                <img src="foto3.png" alt="Entrega de mochilas e materiais escolares.">
+            </figure>
+            
+            <div style="margin-top: 30px; margin-bottom: 20px;">
+                <a href="projetos.html" class="button-link">Saiba Mais</a>
+            </div>
+        </article>
 
-                    <div class="form-group">
-                        <label for="email">Seu Email</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="telefone">Telefone (Opcional)</label>
-                        <input type="text" id="telefone" name="telefone">
-                    </div>
+        <section id="contatos" class="fade-in">
+    <h2>🤝 Entre em Contato Conosco!</h2>
+    <p>Tire suas dúvidas ou envie uma mensagem para a nossa equipe:</p>
+    <br>
+    <p>📍 Endereço:Rua da Esperança, 145 – Boituva/SP</p>
+    <p>✉️ E-mail:azevedojessica751@hotmail.com</p>
+    <p>📲 WhatsApp:(15) 99788-2237</p>
+   
+        </section>
 
-                    <div class="form-group">
-                        <label for="assunto">Assunto</label>
-                        <input type="text" id="assunto" name="assunto" required>
-                    </div>
+    </main>
 
-                    <div class="form-group">
-                        <label for="mensagem">Mensagem</label>
-                        <textarea id="mensagem" name="mensagem" required></textarea>
-                    </div>
+    <footer>
+        <p>&copy; 2025 Futuro em Ação | Todos os direitos reservados</p>
+    </footer>
 
-                    <button type="submit" class="btn-enviar">Enviar Mensagem</button>
+    <script>
+        let index = 0;
+        const imagens = document.querySelectorAll(".slideshow img");
 
-                </form>
-            </div>
-        </section>
+        if (imagens.length > 0) {
+            imagens[0].classList.add("active");
+        }
 
-    </main>
+        function trocarImagem() {
+            if (imagens.length === 0) return;
+            
+            imagens[index].classList.remove("active");
+            index = (index + 1) % imagens.length;
+            imagens[index].classList.add("active");
+        }
 
-    <footer>
-        <p>© 2025 Futuro em Ação | Todos os direitos reservados</p>
-    </footer>
+        setInterval(trocarImagem, 3000);
+    </script>
 
+    <script>
+        const elementos = document.querySelectorAll('.fade-in');
+
+        function mostrarElementos() {
+            elementos.forEach(el => {
+                const posicao = el.getBoundingClientRect().top;
+                const alturaJanela = window.innerHeight;
+
+                if (posicao < alturaJanela - 100) {
+                    el.classList.add('visible');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', mostrarElementos);
+        mostrarElementos();
+    </script>
 </body>
 </html>
