@@ -2,19 +2,23 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Futuro em Ação - ONG Educacional</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Futuro em Ação - De Mão em Mão</title>
     
-   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Playwrite+DE+Grund+Guides&family=Playwrite+DE+SAS:wght@100..400&display=swap" rel="stylesheet">
-   
- <style>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Playwrite+DE+Grund+Guides&family=Playwrite+DE+SAS:wght@100..400&display=swap" rel="stylesheet">
+    
+    <style>
+        /* ------------------------------------- */
+        /* ESTILOS GERAIS */
+        /* ------------------------------------- */
         body {
             font-family: 'Poppins', sans-serif;
             margin: 0;
-            background-color:#FFCC99;
+            background-color: #FFCC99; /* Cor de fundo Laranja Salmão Claro */
             color: #333;
-            scroll-behavior: smooth;
+            line-height: 1.6;
         }
+
         .container {
             max-width: 1100px; 
             margin: 0 auto; 
@@ -22,34 +26,28 @@
         }
 
         header {
-            background-color: white;
-            color: #FF6F61;
+            background-color: #ffffff;
+            color: #000000;
             padding: 20px 0;
             text-align: center;
         }
 
         header img {
-            height: 120px; 
+            height: 120px;
             width: auto;
         }
 
-     
+        /* Aplicação da fonte customizada no H1 */
         header h1 {
             font-family: "Dancing Script", cursive;
             color: #FF6F61;
             margin: 0 0 10px 0; 
-            font-size: 38px; 
+            font-size: 42px; 
             font-weight: 700;
-
-
-        }
-        header p {
-            font-size: 18px;
-            color: #555;
         }
 
         nav {
-            background-color: #ff7f00;
+            background-color: #ff7f00; /* Laranja da navegação */
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
@@ -59,283 +57,231 @@
         nav a {
             color: white;
             text-decoration: none;
-            font-size: 16px; 
             margin: 0 20px;
             font-weight: bold;
             transition: 0.3s;
+            padding: 5px 0; 
         }
-        nav a[href="index.html"] {
-            text-decoration: underline;
-        }
-
 
         nav a:hover {
             color: #ffe0b3;
         }
 
-        section, article {
+        /* Estilo para a página ativa (Início) */
+        nav a[href="index.html"] {
+             text-decoration: underline;
+        }
+
+        main {
+            padding: 40px 20px;
+        }
+
+        h2 {
+            color: #ff7f00; /* Laranja para títulos de seção */
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 32px;
+        }
+
+        /* ------------------------------------- */
+        /* SEÇÃO DESTAQUE / BANNER */
+        /* ------------------------------------- */
+        .banner {
+            background-color: #e8f9f9; /* Cor clara, perto do verde-água */
             padding: 60px 20px;
             text-align: center;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            margin-bottom: 40px;
         }
-        .texto-leitura {
-            max-width: 750px; 
-            margin: 20px auto 40px auto; 
-            text-align: justify; 
-            line-height: 1.7; 
-            padding: 0 15px; 
-            font-size: 17px;
+
+        .banner h2 {
+            font-size: 48px;
+            color: #000000;
+            margin-bottom: 10px;
+        }
+
+        .banner p {
+            font-size: 22px;
+            max-width: 800px;
+            margin: 0 auto 30px;
         }
         
-        #sobre-nos {
-            background-color: #ffffff; 
+        /* Botão Destaque (Padrão Laranja) */
+        .btn-destaque {
+            display: inline-block;
+            background-color: #ff7f00;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 20px;
+            transition: background-color 0.3s;
         }
 
-        #sobre-nos figure img {
-            max-width: 90%;
-            height: auto;
-            border-radius: 10px;
-        }
-        .mvv-container {
-            display: flex; 
-            gap: 30px; 
-            justify-content: center; 
-            margin: 40px auto;
-            flex-wrap: wrap; 
-            padding: 0 20px; 
+        .btn-destaque:hover {
+            background-color: #ffa500;
         }
 
-        .mvv-card {
-            background-color: #e8f9f9; 
-            color: black;
+        /* ------------------------------------- */
+        /* CARDS SOBRE NÓS */
+        /* ------------------------------------- */
+        .cards-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+            padding: 30px 0;
+        }
+
+        .card {
+            background-color: white;
             padding: 30px;
             border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            flex: 1; 
-            min-width: 250px; 
-            max-width: 300px; 
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            flex: 1 1 300px; 
             text-align: center;
-            transition: transform 0.3s;
-            line-height: 1.6;
         }
 
-        .mvv-card:hover {
-            transform: translateY(-5px); 
-        }
-
-        .mvv-card h3 {
-            font-size: 24px;
+        .card h3 {
+            color: #ff7f00;
             margin-top: 0;
-            margin-bottom: 20px;
-            color: #ff7f00; 
+            font-size: 24px;
         }
         
-        
-        #inicio {
-            background: url('fundo.png') no-repeat center/cover;
-            color: #3aafa9;
-            text-shadow: 1px 1px 3px #000;
-            padding: 120px 20px;
-        }
-
-        #inicio h2 {
-            font-size: 42px;
+        .card img {
+            width: 80px;
+            height: 80px;
             margin-bottom: 15px;
         }
 
-   
-        #projetos-section { background-color: #f8fbff; }
-        #contatos { background-color: #f4f6f9; }
-
-        .slideshow {
-    position: relative;
-    max-width: 800px; /* Largura máxima, mas se ajusta se a tela for menor */
-    width: 100%;     /* Ocupa a largura total do contêiner */
-    height: 0;       /* Altura 0 para usar padding */
-    padding-top: 75%; /* 3:4 Proporção (600px / 800px = 0.75). Se suas imagens forem 16:9, use 56.25% */
-    margin: 40px auto;
-    overflow: hidden;
-    border-radius: 15px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
-    background-color: transparent;
-}
-
-        .slideshow img {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            opacity: 0;
-            transition: opacity 1s ease-in-out;
-            border-radius: 15px;
+        /* ------------------------------------- */
+        /* FOOTER */
+        /* ------------------------------------- */
+        footer { 
+            background-color: #ff7f00; 
+            color: white; 
+            text-align: center; 
+            padding: 20px; 
+            margin-top: 40px;
         }
 
-        .slideshow img.active {
-            opacity: 1;
-        }
+        /* ------------------------------------- */
+        /* AJUSTES PARA RESPONSIVIDADE (MOBILE) */
+        /* ------------------------------------- */
+        @media (max-width: 768px) {
+            
+            /* Diminui o padding principal e a fonte do título */
+            main {
+                padding: 20px 10px;
+            }
 
-        
-        .button-link, button {
-            background-color: #ff7f00;
-            color: white;
-            border: none;
-            padding: 12px 25px;
-            border-radius: 8px;
-            cursor: pointer;
-            font-size: 16px;
-            transition: background 0.3s;
-            text-decoration: none; 
-            display: inline-block;
-            font-weight: bold;
-        }
-        
-        .button-link:hover, button:hover { 
-            background-color: #ffa500 
-        }
+            header img {
+                height: 80px;
+            }
 
-        footer { background-color: #ff7f00; color: white; text-align: center; padding: 20px; }
+            header h1 {
+                font-size: 30px;
+            }
+            
+            /* Ajuste do Banner */
+            .banner {
+                padding: 40px 10px;
+            }
 
-        /* Animação */
-        .fade-in { opacity: 0; transform: translateY(40px); transition: opacity 0.8s ease-out, transform 0.8s ease-out; }
-        .fade-in.visible { opacity: 1; transform: translateY(0); }
+            .banner h2 {
+                font-size: 36px;
+            }
+
+            .banner p {
+                font-size: 18px;
+            }
+            
+            /* Ajuste do Botão Destaque */
+            .btn-destaque {
+                padding: 12px 25px;
+                font-size: 18px;
+            }
+            
+            /* Garantir que os cards empilhem */
+            .cards-container {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .card {
+                flex: 1 1 100%; /* Ocupa a largura total */
+            }
+        }
     </style>
-
 </head>
 
 <body>
     <header>
-        <img src="logo.png" alt="Logo Futuro em Ação" height="120"> 
+        <img src="logo.png" alt="Logo Futuro em Ação" height="120">
         <h1>Futuro em Ação - De Mão em Mão</h1>
-        <p>⭐ Bem-vindo ⭐</p>
+        <p>⭐ Construindo um futuro mais justo e solidário ⭐</p>
     </header>
 
     <nav>
         <a href="index.html">Início</a>
-        <a href="#sobre-nos">Sobre Nós</a>
+        <a href="index.html#sobre-nos">Sobre Nós</a>
         <a href="projetos.html">Projetos</a>
         <a href="voluntarios.html">Voluntários</a>
         <a href="cadastro_voluntario.html">Cadastro</a>
         <a href="doacoes.html">Doações</a>
-        <a href="contato.html">Contatos</a>
+        <a href="contato.html">Contatos</a> 
     </nav>
-
+    
     <main class="container">
-
-        <div id="inicio" class="fade-in">
-            
-        </section>
         
-        <section id="sobre-nos" class="fade-in">
-            <h2>⭐Sobre Nós⭐</h2>
-            
-            <div class="texto-leitura">
-                <p>
-                    Nascemos da simples e profunda ideia de que o que não serve mais para um, pode ser a grande oportunidade para outro. Nossa ONG atua como uma ponte, conectando a generosidade de doadores e voluntários àqueles que mais precisam de um reforço educacional e material. Trabalhamos incansavelmente na coleta e distribuição de livros, mochilas e materiais escolares, e na organização de projetos de reforço escolar e capacitação. Nosso objetivo vai além da doação material; buscamos inspirar, transformar e garantir que a falta de recursos nunca seja um impedimento para o desenvolvimento de uma criança.
-                </p>
-            </div>
-
-            <figure>
-                <img src="imagem_2f98a0.jpg" alt="Professora lendo para um grupo de crianças sorrindo.">
-            </figure>
+        <section class="banner">
+            <h2>Educação e Dignidade para Todos</h2>
+            <p>Transformamos vidas por meio do reforço escolar, atividades culturais e distribuição de materiais. Seja a mudança que o mundo precisa!</p>
+            <a href="doacoes.html" class="btn-destaque">Faça uma Doação Agora!</a>
         </section>
-        
-        <section id="mvv" class="fade-in">
-            <h2 style="margin-bottom: 50px;">Nossa Essência</h2> 
 
-            <div class="mvv-container">
+        <section id="sobre-nos">
+            <h2>Nosso Propósito</h2>
+            <p style="text-align: center; font-size: 18px; max-width: 800px; margin: 0 auto 40px;">
+                A Futuro em Ação nasceu do desejo de criar oportunidades e reduzir a desigualdade. Nossa missão se baseia em três pilares essenciais:
+            </p>
+
+            <div class="cards-container">
                 
-                <div class="mvv-card">
-                    <h3>Missão</h3>
-                    <p>"Promover a dignidade e o desenvolvimento humano por meio do acolhimento, da educação e da inclusão social, criando oportunidades para que cada pessoa possa reconstruir sua trajetória com fé, amor e autonomia."</p>
+                <div class="card">
+                    <img src="icon_educacao.png" alt="Ícone Educação">
+                    <h3>Reforço Educacional</h3>
+                    <p>Oferecemos aulas de apoio para alunos do Ensino Fundamental, focando em Matemática e Português, para garantir um futuro promissor.</p>
                 </div>
 
-                <div class="mvv-card">
-                    <h3>Visão</h3>
-                    <p>"Tornar-se um símbolo de amor e solidariedade na Região dos Lagos, unindo a comunidade em ações que transformam realidades e semeiam novos começos."</p>
-                </div>
-
-                <div class="mvv-card">
-                    <h3>Valores</h3>
-                    <p>Amor ao próximo: essência que orienta cada uma de nossas ações.
-Respeito e empatia: acolher a todos com escuta sensível, cuidado e sem julgamentos.
-Fé e esperança: acreditar na força interior e no potencial de transformação de cada pessoa.
-Transparência: atuar com ética, clareza e responsabilidade em cada passo dado.
-Compromisso social: promover mudanças reais por meio de iniciativas solidárias e sustentáveis que gerem impacto positivo na comunidade.</p>
+                <div class="card">
+                    <img src="icon_familia.png" alt="Ícone Família">
+                    <h3>Apoio Comunitário</h3>
+                    <p>Realizamos campanhas de arrecadação de alimentos e vestuário, trabalhando em conjunto com as famílias de nossa comunidade.</p>
                 </div>
                 
+                <div class="card">
+                    <img src="icon_cultura.png" alt="Ícone Cultura">
+                    <h3>Cultura e Esporte</h3>
+                    <p>Promovemos oficinas de dança, música e esportes, essenciais para o desenvolvimento social, criatividade e bem-estar das crianças.</p>
+                </div>
+
             </div>
+
         </section>
-
-        <article id="projetos-section" class="fade-in">
-            <h2>Nossos Projetos</h2>
-            <p>Doações que inspiram, reforço que transforma: Equipamos o presente e construímos o futuro.</p>
-            
-            <figure class="slideshow">
-                <img src="foto1.png" alt="Crianças utilizando computadores do projeto." class="active">
-                <img src="foto2.png" alt="Voluntários ensinando em sala de aula.">
-                <img src="foto3.png" alt="Entrega de mochilas e materiais escolares.">
-            </figure>
-            
-            <div style="margin-top: 30px; margin-bottom: 20px;">
-                <a href="projetos.html" class="button-link">Saiba Mais</a>
-            </div>
-        </article>
-
-        <section id="contatos" class="fade-in">
-            <div>
-    <h2>🤝 Entre em Contato Conosco!</h2>
-    <p>Tire suas dúvidas ou envie uma mensagem para a nossa equipe:</p>
-    <br>
-    <p>📍 Endereço:Rua da Esperança, 145 – Boituva/SP</p>
-    <p>✉️ E-mail:azevedojessica751@hotmail.com</p>
-    <p>📲 WhatsApp:(15) 99788-2237</p>
-   
-</div>
-        </section>
-
-    </main>
+        
+        <div style="text-align: center; padding: 30px; background-color: #fff; border-radius: 10px; margin-top: 40px;">
+             <h2>Junte-se a Nós!</h2>
+             <p style="max-width: 600px; margin: 0 auto 20px;">Seu tempo e talento são valiosos. Venha ser um voluntário e faça parte desta transformação.</p>
+             <a href="cadastro_voluntario.html" class="btn-destaque" style="background-color: #FF6F61;">Quero ser Voluntário</a>
+        </div>
+        </main>
 
     <footer>
-        <p>&copy; 2025 Futuro em Ação | Todos os direitos reservados</p>
+        <p>© 2025 Futuro em Ação | Todos os direitos reservados</p>
     </footer>
 
-    <script>
-        let index = 0;
-        const imagens = document.querySelectorAll(".slideshow img");
-
-        if (imagens.length > 0) {
-            imagens[0].classList.add("active");
-        }
-
-        function trocarImagem() {
-            if (imagens.length === 0) return;
-            
-            imagens[index].classList.remove("active");
-            index = (index + 1) % imagens.length;
-            imagens[index].classList.add("active");
-        }
-
-        setInterval(trocarImagem, 3000);
-    </script>
-
-    <script>
-        const elementos = document.querySelectorAll('.fade-in');
-
-        function mostrarElementos() {
-            elementos.forEach(el => {
-                const posicao = el.getBoundingClientRect().top;
-                const alturaJanela = window.innerHeight;
-
-                if (posicao < alturaJanela - 100) {
-                    el.classList.add('visible');
-                }
-            });
-        }
-
-        window.addEventListener('scroll', mostrarElementos);
-        mostrarElementos();
-    </script>
 </body>
 </html>
-
