@@ -7,9 +7,7 @@
     
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Playwrite+DE+Grund+Guides&family=Playwrite+DE+SAS:wght@100..400&display=swap" rel="stylesheet">
     
-    <link rel="stylesheet" href="style.css"> 
     <style>
-        
         /* ESTILOS GERAIS */
         body {
             font-family: 'Poppins', sans-serif;
@@ -29,25 +27,21 @@
             font-family: "Dancing Script", cursive;
             color: #FF6F61;
             margin: 0 0 10px 0; 
-            font-size: 38px; /* Tamanho maior para destaque */
+            font-size: 38px;
             font-weight: 700;
-
         }
-        /* FIM DA REGRA DE CSS DO H1 */
-
 
         nav {
             background-color: #ff7f00;
-            display: flex; /* Adicionado para melhor centralização */
+            display: flex;
             justify-content: center;
-            flex-wrap: wrap; /* Adicionado para responsividade */
+            flex-wrap: wrap;
             padding: 10px 0;
         }
 
         nav a {
             color: white;
             text-decoration: none;
-            /* AJUSTE PARA IGUALAR O TAMANHO E FONTE DAS PÁGINAS INICIAL E DOAÇÕES */
             font-size: 16px; 
             margin: 0 20px; 
             font-weight: bold;
@@ -75,12 +69,12 @@
             margin: 30px 0;
             padding: 30px;
             border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15); /* Sombra um pouco mais destacada */
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
         }
 
         .projeto img {
             width: 100%;
-            max-height: 350px; /* Aumentei um pouco a altura da imagem */
+            max-height: 350px;
             object-fit: cover;
             border-radius: 12px;
             margin-bottom: 25px;
@@ -88,23 +82,23 @@
 
         /* ESTILOS DE TEXTO E BOTÕES PERSONALIZADOS (NOVO) */
         .projeto h2 {
-            color: #ff7f00; /* Título em laranja para destaque */
+            color: #ff7f00;
             margin-bottom: 20px;
             font-size: 28px;
             text-align: center;
         }
         
         .projeto-texto {
-            max-width: 90%; /* Ajuste a largura do texto dentro do card */
+            max-width: 90%;
             margin: 0 auto;
             text-align: justify;
-            line-height: 1.8; /* Aumenta o espaçamento para mais conforto na leitura */
+            line-height: 1.8;
             font-size: 17px;
             padding: 10px 0;
         }
 
         .projeto-texto strong {
-            color: #2b7a78; /* Destaque em verde para palavras-chave */
+            color: #2b7a78;
             font-weight: 700;
         }
 
@@ -124,7 +118,7 @@
             display: flex;
             justify-content: center;
             gap: 20px; 
-            flex-wrap: wrap; /* Garante que os botões se ajustem em telas menores */
+            flex-wrap: wrap;
         }
 
         /* ESTILO DO FOOTER E BOTÕES PADRÃO */
@@ -135,19 +129,23 @@
             padding: 15px;
             margin-top: 40px;
         }
-
-        button {
+        
+        /* NOVO CSS PARA ESTILIZAR O LINK COMO BOTÃO */
+        .button-link { 
             background-color: #ff7f00;
             color: white;
             border: none;
-            padding: 12px 25px; /* Aumentei o padding do botão */
+            padding: 12px 25px;
             border-radius: 8px;
             cursor: pointer;
             font-size: 16px;
             transition: 0.3s;
+            text-decoration: none; /* Remove o sublinhado do link */
+            display: inline-block; /* Permite aplicar padding e width */
+            font-weight: bold;
         }
 
-        button:hover {
+        .button-link:hover {
             background-color: #ffa500;
         }
     </style>
@@ -187,8 +185,8 @@
             </div>
             
             <div class="projeto-acoes">
-                <button onclick="window.location.href='cadastro_voluntario.html'">Quero ser Voluntário!</button>
-                <button onclick="window.location.href='doacoes.html'">Quero Doar!</button>
+                <a href="cadastro_voluntario.html" class="button-link">Quero ser Voluntário!</a>
+                <a href="doacoes.html" class="button-link">Quero Doar!</a>
             </div>
         </section>
 
@@ -210,8 +208,8 @@
             </div>
             
             <div class="projeto-acoes">
-                <button onclick="window.location.href='cadastro_voluntario.html'">Quero ser Voluntário Professor!</button>
-                <button onclick="window.location.href='doacoes.html'">Quero Doar Materiais!</button>
+                <a href="cadastro_voluntario.html" class="button-link">Quero ser Voluntário Professor!</a>
+                <a href="doacoes.html" class="button-link">Quero Doar Materiais!</a>
             </div>
         </section>
 
@@ -229,7 +227,7 @@
             </div>
             
             <div class="projeto-acoes">
-                <button onclick="window.location.href='doacoes.html'">Quero Doar Agora!</button>
+                <a href="doacoes.html" class="button-link">Quero Doar Agora!</a>
             </div>
         </section>
     </main>
@@ -238,4 +236,5 @@
         <p>&copy; 2025 Futuro em Ação | Todos os direitos reservados</p>
     </footer>
 </body>
+
 </html>
